@@ -1,0 +1,62 @@
+EXERCÍCIO JAVA 4:
+
+MAIN:
+
+package metodosCorretos;
+
+
+import java.util.Scanner;
+public class Aplicacao {
+
+	public static void main(String[] args) {
+		// Exercicio 04 - Recebe número e apresenta fatorial
+		Fatorial fat = new Fatorial ();
+		
+		Scanner sc = new Scanner (System.in);
+
+		
+		System.out.println("Digite aqui um número para descobrir o fatorial: ");
+		long numeroFat = sc.nextLong();		//obs: foi usado o tipo long pois estava estourando a quantidade de caracteres
+		
+		fat.exibirFatorial(numeroFat);
+		
+	}
+}
+
+
+
+MÉTODO:
+
+
+package metodosCorretos;
+
+public class Fatorial {
+	public void exibirFatorial (long numeroFat ) {
+		
+		long fatorial = 1;		//obs: foi usado o tipo long pois estava estourando a quantidade de caracteres
+		
+		
+		 for (int i = 1; i <= numeroFat; i++) {
+		        fatorial = fatorial * i;
+		       
+		 }
+
+		
+		System.out.println("Fatorial de " + numeroFat +" é: ! " + fatorial);
+		}
+}
+		
+
+
+
+
+
+
+
+   
+
+    
+
+
+
+

@@ -1,0 +1,32 @@
+EXERCICIO JAVA 2:
+
+
+METODO:
+
+public class Saudacao {
+	public void saudacaoPersonalizada(String nome) {
+		System.out.println("Olá," +nome+ " seja bem-vindo(a)!");
+	}
+}
+
+
+MAIN:
+
+import java.util.Scanner;
+public class Aplicacao {
+
+	public static void main(String[] args) {
+		// Exercicio 02 - Saudação Personalizada
+		Saudacao n = new Saudacao ();
+		
+		Scanner sc = new Scanner (System.in);
+
+		
+		System.out.println("Digite o seu nome: ");
+		String nome = sc.next();
+		
+		n.saudacaoPersonalizada( nome);
+		
+	}
+
+}

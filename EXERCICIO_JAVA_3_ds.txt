@@ -1,0 +1,89 @@
+EXERCICIO JAVA 3 
+
+MAIN:
+
+package metodosCorretoPt2;
+
+import java.util.Scanner;
+public class Aplicacao {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite o primeiro número:");
+		int n1 = sc.nextInt();
+
+		System.out.println("Digite o segundo número:");
+		int n2 = sc.nextInt();
+
+		InteirosSorteados numero = new InteirosSorteados();
+
+		boolean resultado = numero.comparaNumeros(n1, n2);
+
+		System.out.println("Resultado: " + resultado);
+
+	
+		sc.close();
+	}
+}
+
+
+//O método main é onde o programa começa.
+//Aqui o usuário digita dois números.
+//Depois, o programa chama a classe que faz o sorteio e a comparação.
+//Ele envia os números digitados para o método.
+//O método retorna true ou false dependendo se os números são iguais aos sorteados.
+//Por fim, o resultado é mostrado na tela.
+
+
+
+MÉTODOS:
+
+
+package metodosCorretoPt2;
+
+import java.util.Random;
+public class InteirosSorteados {
+	
+	public int[] sortearNumeros() {
+		Random r = new Random();
+
+		int s1 = r.nextInt(100) + 1;
+		int s2 = r.nextInt(100) + 1;
+
+		return new int[]{s1, s2};
+	}
+	
+	public boolean comparaNumeros(int n1, int n2) {
+
+	    int[] sorteados = sortearNumeros();
+
+	    int s1 = sorteados[0];
+	    int s2 = sorteados[1];
+
+	    System.out.println("Sorteados: " + s1 + " e " + s2);
+
+	    if (n1 == s1 && n2 == s2) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+}
+
+
+//Esse método recebe dois números digitados pelo usuário (n1 e n2).
+//Dentro dele, o programa sorteia dois novos números aleatórios (s1 e s2).
+//Depois disso, ele compara:
+//- se o primeiro número digitado é igual ao primeiro sorteado
+//- e se o segundo número digitado é igual ao segundo sorteado
+//Se os dois forem iguais ao mesmo tempo, retorna true.
+//Caso contrário, retorna false.
+//Ou seja: ele verifica se o usuário acertou exatamente os dois números sorteados.
+
+
+
+
+
+	
